@@ -69,3 +69,85 @@ int main()
   return 0;
 }
 ```
+
+## [Exercise 1.8](ex1-8.cpp)
+```cpp
+#include <iostream>
+
+int main()
+{ 
+  std::cout << "/*";          // valid
+  std::cout << "*/";          // valid
+  std::cout << /* "*/" */;        // invalid
+  std::cout << /*  "*/" /* "/*"  */;  // valid
+  return 0;
+}
+```
+
+## [Exercise 1.9](ex1-9.cpp)
+```cpp
+#include <iostream>
+
+int main()
+{ 
+  int sum = 0, counter = 50;
+
+  while (counter <= 100) {
+    sum += counter;
+    counter++;
+  }
+  
+  std::cout << "Sum of 50 to 100 inclusive is " << sum << std::endl;
+
+  return 0;
+}
+```
+
+## [Exercise 1.10](ex1-10.cpp)
+```cpp
+#include <iostream>
+
+int main()
+{ 
+  int counter = 10;
+
+  while (counter >= 0) {
+    std::cout << counter << " ";
+    counter--;
+  }
+  std::cout << std::endl;
+
+  return 0;
+}
+```
+
+## [Exercise 1.11](ex1-11.cpp)
+```cpp
+#include <iostream>
+
+int main()
+{ 
+  int lower = 0, higher = 0;
+
+  std::cout << "Please enter the lower integer: ";
+  std::cin >> lower;
+
+  std::cout << "Please enter the higher integer: ";
+  std::cin >> higher;
+
+  // Make sure lower < higher
+  if (lower > higher) {
+    std::cout << "The lower integer must be less than the higher integer!";
+    return 0;
+  }
+  
+  // Print lower to higher inclusive
+  while (lower <= higher) {
+    std::cout << lower << " ";
+    lower++;
+  }
+  std::cout << std::endl;
+
+  return 0;
+}
+```
