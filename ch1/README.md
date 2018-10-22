@@ -189,8 +189,8 @@ int main()
 }
 ```
 
-## [Exercise 1.14]
+## Exercise 1.14
 Usually a while loop is used when we don't know how many iterations will happen (ex: reading a file, to the end of the file). With a for loop, it's usually used when the number of iterations are known. See a similar question on stack overflow [here](https://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming).
 
-## [Exercise 1.15]
+## Exercise 1.15
 You can see examples on page 16.
