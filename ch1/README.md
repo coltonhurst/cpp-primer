@@ -152,7 +152,7 @@ int main()
 }
 ```
 
-## [Exercise 1.12]
+## Exercise 1.12
 This loop sums the range of numbers from -100 to 100 inclusive. The final value of sum is zero.
 
 ## [Exercise 1.13a](ex1-13a.cpp)
