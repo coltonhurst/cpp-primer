@@ -194,3 +194,6 @@ Usually a while loop is used when we don't know how many iterations will happen 
 
 ## Exercise 1.15
 You can see examples on page 16.
+
+## Exercise 1.16
+Just see the code from the book [here](1-4-3.cpp).
