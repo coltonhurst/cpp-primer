@@ -151,3 +151,46 @@ int main()
   return 0;
 }
 ```
+
+## [Exercise 1.12]
+This loop sums the range of numbers from -100 to 100 inclusive. The final value of sum is zero.
+
+## [Exercise 1.13a](ex1-13a.cpp)
+Exercise 1.9 using a for loop:
+```cpp
+#include <iostream>
+
+int main()
+{
+  int sum = 0;
+
+  for (int i = 50; i <= 100; i++)
+    sum += i;
+  
+  std::cout << "Sum of 50 to 100 inclusive is " << sum << std::endl;
+
+  return 0;
+}
+```
+
+## [Exercise 1.13b](ex1-13b.cpp)
+Exercise 1.10 using a for loop:
+```cpp
+#include <iostream>
+
+int main()
+{
+  for (int i = 10; i >= 0; i--)
+    std::cout << i << " ";
+
+  std::cout << std::endl;
+
+  return 0;
+}
+```
+
+## [Exercise 1.14]
+Usually a while loop is used when we don't know how many iterations will happen (ex: reading a file, to the end of the file). With a for loop, it's usually used when the number of iterations are known. See a similar question on stack overflow [here](https://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming).
+
+## [Exercise 1.15]
+You can see examples on page 16.
