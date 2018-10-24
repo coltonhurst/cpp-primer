@@ -197,3 +197,45 @@ You can see examples on page 16.
 
 ## Exercise 1.16
 Just see the code from the book [here](1-4-3.cpp).
+
+## Exercise 1.17
+If all the input values are equal, then there will only be one line of output. Like: `X occurs X times`, where X is the input value.
+
+If there are no duplicated values, then there is a line of output for every input, like: `X occurs Y times`. `X` is the changing input number, and `Y` will always be 1.
+
+## Exercise 1.18
+I ran it. 
+
+## [Exercise 1.19](ex1-19.cpp)
+```cpp
+#include <iostream>
+
+int main()
+{ 
+  int a = 0, b = 0;
+
+  std::cout << "Please enter the first integer: ";
+  std::cin >> a;
+
+  std::cout << "Please enter the second integer: ";
+  std::cin >> b;
+
+  // If a <= b, then print from a to b (lower num to higher num)
+  if (a <= b)
+  {
+    while (a <= b) {
+      std::cout << a++ << " ";
+    }
+  }
+  else // a >= b, so print a down to b (higher num to lower num)
+  {
+    while (a >= b) {
+      std::cout << a-- << " ";
+    }
+  }
+
+  std::cout << std::endl;
+
+  return 0;
+}
+```
