@@ -239,3 +239,116 @@ int main()
   return 0;
 }
 ```
+
+## [Exercise 1.20](ex1-20.cpp)
+```cpp
+#include <iostream>
+#include <string>
+#include "Sales_item.h"
+
+int main()
+{
+  // This is an infinite loop...
+  while (true) {
+    // Get and output the transaction
+    Sales_item transaction;
+    std::cin >> transaction;
+    std::cout << transaction << std::endl;
+  }
+
+  return 0;
+}
+```
+
+## [Exercise 1.21]
+Please see [1-5-1b.cpp](1-5-1b.cpp).
+
+## [Exercise 1.22](ex1-22.cpp)
+```cpp
+#include <iostream>
+#include <string>
+#include "Sales_item.h"
+
+int main()
+{
+  
+  Sales_item final;
+  Sales_item transaction;
+
+  // get the main Sales_item
+  if (std::cin >> final)
+  {
+    // keep getting more Sales_item's
+    while (std::cin >> transaction) 
+    {
+      // If the ISBN's match, add the current trans to final
+      // If not, print final, and set final to trans
+      if (transaction.isbn() == final.isbn())
+      {
+        final += transaction;
+      } else {
+        std::cout << final << std::endl;
+        final = transaction;
+      }
+    }
+    std::cout << final; // print the final for the last time if std::cin read failed
+  }
+  else {
+    std::cout << "The read failed." << std::endl;
+    return -1;
+  }
+
+  return 0;
+}
+```
+
+## [Exercise 1.23](ex1-23.cpp)
+```cpp
+#include <iostream>
+#include <string>
+#include "Sales_item.h"
+
+int main()
+{
+  
+  Sales_item final;
+  Sales_item transaction;
+  int transactionCount = 0;
+
+  // get the main Sales_item
+  if (std::cin >> final)
+  {
+    transactionCount++;
+    // keep getting more Sales_item's
+    while (std::cin >> transaction) 
+    {
+      // If the ISBN's match, add the current trans to final
+      // If not, print final, and set final to trans
+      if (transaction.isbn() == final.isbn())
+      {
+        final += transaction;
+        transactionCount++;
+      } else {
+        std::cout << final << std::endl;
+        std::cout << "# of transactions: " << transactionCount << std::endl;
+        final = transaction;
+        transactionCount = 1;
+      }
+    }
+    std::cout << final << std::endl; // print the final for the last time if std::cin read failed
+    std::cout << "# of transactions: " << transactionCount << std::endl;
+  }
+  else {
+    std::cout << "The read failed." << std::endl;
+    return -1;
+  }
+
+  return 0;
+}
+```
+
+## [Exercise 1.24]
+[ex1-23.cpp](ex1-23.cpp) has been tested.
+
+## [Exercise 1.25]
+[1-6.cpp](1-6.cpp) has been tested.
